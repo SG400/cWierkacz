@@ -2,10 +2,10 @@
 
 session_start();
 
-require_once __DIR__."/User.php";
-require_once __DIR__."/Tweet.php";
-require_once __DIR__."/Comment.php";
-require_once __DIR__."/Message.php";
+require_once __DIR__ . "/User.php";
+require_once __DIR__ . "/Tweet.php";
+require_once __DIR__ . "/Comment.php";
+require_once __DIR__ . "/Message.php";
 
 $db_host = "localhost";
 $db_user = "root";

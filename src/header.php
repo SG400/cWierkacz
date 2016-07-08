@@ -27,7 +27,7 @@
                     $newMessageCount = Message::getNewMessages($db_conn, $_SESSION['loggedUserId']);
 
                     if ($newMessageCount > 0) {
-                        $messageMenuText = "Twoje wiadomości " . "<span class='badge'>".$newMessageCount."</span>";
+                        $messageMenuText = "Twoje wiadomości " . "<span class='badge'>" . $newMessageCount . "</span>";
                     } else {
                         $messageMenuText = "Twoje wiadomości";
                     }
@@ -38,16 +38,16 @@
                     echo("</ul>");
 
                     echo("<ul class=\"nav navbar-nav navbar-right\">");
-                        echo "<li><a href=\"logout.php\">Wyloguj się</a></li>";
-                        echo "<li><span class=\"label label-success\">$loggedUser</span></li>";
+                    echo "<li><a href=\"logout.php\">Wyloguj się</a></li>";
+                    echo "<li><span class=\"label label-success\">$loggedUser</span></li>";
                     echo("</ul>");
                 } else {
                     echo "<li class=\"active\"><a href=\"index.php\">Strona główna</a></li>";
                     echo("</ul>");
 
                     echo("<ul class=\"nav navbar-nav navbar-right\">");
-                        echo "<li><a href=\"login.php\">Logowanie</a></li>";
-                        echo "<li><a href=\"register.php\">Rejestracja</a></li>";
+                    echo "<li><a href=\"login.php\">Logowanie</a></li>";
+                    echo "<li><a href=\"register.php\">Rejestracja</a></li>";
                     echo("</ul>");
                 }
                 ?>
