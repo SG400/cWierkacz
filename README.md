@@ -8,3 +8,4 @@
 - sprawdzanie czy login do rejestracji już istnieje
 - może jakieś obrazki? user wybiera avatara?
 - showUsers.php - dodać opis usera do listy
+- może własne kolory?
