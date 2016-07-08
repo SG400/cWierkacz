@@ -24,7 +24,6 @@ if (isset($_SESSION['loggedUserId']) === false) {
         $newComment->setText($newCommentText);
         $newComment->setDate(date("Y-m-d-H-i-s"));
         $newComment->saveCommentToDB($db_conn);
-
     }
 
 
@@ -118,30 +117,20 @@ if (isset($_SESSION['loggedUserId']) === false) {
                         </tr>";
 
                     }
-                    //echo("<tr><td></td>");
-
-                    //echo("<tr><td></td><td>");
                     echo("</table>");
                     echo("</div>");
                     echo("</div>");
                     echo("</td></tr>");
 
                 }
-
-                //echo "<th>Twit</th><th>Wysyłający</th><th>Data</th>";
-
             }
 
-
             echo "</table>";
-            //echo "</div>";
             echo("<br>");
 
         } else {
             echo "<p>Nie ma żadnych twitów</p>";
         }
-
-
 
 
     } else {

@@ -32,9 +32,7 @@ if (count($allTwitterUsers) > 0) {
         }
 
 
-        echo ("</tr>");
-
-
+        echo("</tr>");
 
 
     }

@@ -10,14 +10,11 @@ if (isset($_SESSION['loggedUserId']) === false) {
 
 ?>
 
-    <div class='container'>
+<div class='container'>
     <h1>Twoje wiadomości:</h1>
     <br>
 
-
     <?php
-
-
 
     $getAllMesaggesResult = Message::getAllMessages($db_conn, 'receiver_id', $_SESSION['loggedUserId']);
 
@@ -35,7 +32,7 @@ if (isset($_SESSION['loggedUserId']) === false) {
             $messageDate = $messageRow->getDate();
             $messageRead = $messageRow->checkMessage();
 
-            if ($messageRead == 'new'){
+            if ($messageRead == 'new') {
                 echo "<tr class='lead'>";
             } else {
                 echo "<tr class=''>";
@@ -78,7 +75,7 @@ if (isset($_SESSION['loggedUserId']) === false) {
                     $messageDate = $messageRow->getDate();
                     $messageRead = $messageRow->checkMessage();
 
-                    if ($messageRead == 'new'){
+                    if ($messageRead == 'new') {
                         echo "<tr class='lead'>";
                     } else {
                         echo "<tr class=''>";
@@ -93,8 +90,6 @@ if (isset($_SESSION['loggedUserId']) === false) {
             } else {
                 echo "<p>Nie wysłałeś żadnych wiadomości</p>";
             }
-
-
         }
     }
 

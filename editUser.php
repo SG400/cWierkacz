@@ -26,13 +26,13 @@ if ((!empty($_POST['password1'])) && $_POST['password1'] === $_POST['password2']
 }
 
 echo "<div class='container'>";
-echo    "<h2>Zmień swoje dane:</h2>";
-echo    "<form action='#' method='post' class=\"form-horizontal\" role=\"form\">";
-echo        "<label>Opis: <input class=\"form-control\" type='text' name='description'></label><br>";
-echo        "<label>Nowe hasło:<input class=\"form-control\" type='text' name='password1'></label><br>";
-echo        "<label>Powtórz nowe hasło:<input class=\"form-control\" type='text' name='password2'></label><br>";
-echo    "<button type='submit' class='btn btn-default'>Zmień dane</button>";
-echo    "</form>";
+echo "<h2>Zmień swoje dane:</h2>";
+echo "<form action='#' method='post' class=\"form-horizontal\" role=\"form\">";
+echo "<label>Opis: <input class=\"form-control\" type='text' name='description'></label><br>";
+echo "<label>Nowe hasło:<input class=\"form-control\" type='text' name='password1'></label><br>";
+echo "<label>Powtórz nowe hasło:<input class=\"form-control\" type='text' name='password2'></label><br>";
+echo "<button type='submit' class='btn btn-default'>Zmień dane</button>";
+echo "</form>";
 echo "</div>";
 
 

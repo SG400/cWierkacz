@@ -61,7 +61,7 @@ require_once __DIR__ . "/src/header.php";
             echo "<table class='table'>";
 
 
-            $counter=0;
+            $counter = 0;
 
             foreach ($getAllTweetsResult as $twitRow) {
 
@@ -99,10 +99,10 @@ require_once __DIR__ . "/src/header.php";
 
                     echo("<tr><td></td><td>");
                     echo("<div class='col-md-6'>");
-                    echo("<button data-toggle='collapse' data-target='#commentTable" .$counter."' class='btn btn-default btn-sm'>Zwiń/rozwiń komentarze</button>");
-                    echo("<div id='commentTable".$counter."' class='collapse'>");
+                    echo("<button data-toggle='collapse' data-target='#commentTable" . $counter . "' class='btn btn-default btn-sm'>Zwiń/rozwiń komentarze</button>");
+                    echo("<div id='commentTable" . $counter . "' class='collapse'>");
 
-                   echo("<table class='table` table-condensed table-hover'><th></th><th>Komentarz</th><th>Komentujący</th><th>Data</th>");
+                    echo("<table class='table` table-condensed table-hover'><th></th><th>Komentarz</th><th>Komentujący</th><th>Data</th>");
 
                     foreach ($getAllCommentsResult as $commentRow) {
                         $commentId = $commentRow->getId();
@@ -122,13 +122,10 @@ require_once __DIR__ . "/src/header.php";
 
                 }
 
-                //echo "<th>Twit</th><th>Wysyłający</th><th>Data</th>";
-
             }
 
 
             echo "</table>";
-            //echo "</div>";
             echo("<br>");
 
         } else {

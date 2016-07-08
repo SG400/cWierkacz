@@ -1,9 +1,9 @@
 <?php
-require_once __DIR__."/src/connection.php";
-require_once __DIR__."/src/functions.php";
-require_once __DIR__."/src/header.php";
+require_once __DIR__ . "/src/connection.php";
+require_once __DIR__ . "/src/functions.php";
+require_once __DIR__ . "/src/header.php";
 
-if(isset($_SESSION['loggedUserId']) === false) {
+if (isset($_SESSION['loggedUserId']) === false) {
     header("Location: login.php");
 }
 
@@ -12,11 +12,11 @@ if(isset($_SESSION['loggedUserId']) === false) {
 
 <div class='container'>
 
-            <?php
+    <?php
 
-            $receiverName = getUserLogin($db_conn, $_GET['UserId']);
+    $receiverName = getUserLogin($db_conn, $_GET['UserId']);
 
-            echo "<div class=''>
+    echo "<div class=''>
                         <h3>Wyślij wiadomość do użytkownika <b>$receiverName</b></h3>
                         <div class=''>
                             <form action='sendMessage.php?UserId={$_GET['UserId']}' class=\"form-horizontal\" role=\"form\" method='post'>
@@ -26,26 +26,26 @@ if(isset($_SESSION['loggedUserId']) === false) {
                         </div>
                      </div>";
 
-            if(isset($_POST['messageText']) && !empty($_POST['messageText'])) {
+    if (isset($_POST['messageText']) && !empty($_POST['messageText'])) {
 
-                $newMessage = new Message();
+        $newMessage = new Message();
 
-                $newMessage->setSenderId($_SESSION['loggedUserId']);
+        $newMessage->setSenderId($_SESSION['loggedUserId']);
 
-                    $newMessage->setReceiverId($_GET['UserId']);
-                    $newMessage->setMessageText($_POST['messageText']);
-                    $newMessage->setDate(date("Y-m-d-H-i-s"));
-                    $newMessageResult = $newMessage->saveMessageToDB($db_conn);
+        $newMessage->setReceiverId($_GET['UserId']);
+        $newMessage->setMessageText($_POST['messageText']);
+        $newMessage->setDate(date("Y-m-d-H-i-s"));
+        $newMessageResult = $newMessage->saveMessageToDB($db_conn);
 
-                if($newMessageResult == true) {
-                    echo "<h2>Wiadomość została wysłana!</h2>";
-                } else {
-                    echo "<h2>Wiadomość nie została wysłana!</h2>";
-                }
-            }
-            $db_conn->close();
-            $db_conn = null;
-            ?>
+        if ($newMessageResult == true) {
+            echo "<h2>Wiadomość została wysłana!</h2>";
+        } else {
+            echo "<h2>Wiadomość nie została wysłana!</h2>";
+        }
+    }
+    $db_conn->close();
+    $db_conn = null;
+    ?>
 </div>
 </body>
 </html>
