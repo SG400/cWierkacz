@@ -3,7 +3,6 @@
 class Tweet
 {
 
-    //Static REPOSITORY methods:
     public static function getAllTweets(mysqli $db_conn, $user_id, $all)
     {
 
