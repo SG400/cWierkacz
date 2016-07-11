@@ -2,7 +2,6 @@
 
 class User
 {
-    //Static REPOSITORY methods:
     static public function GetAllUsers(mysqli $db_conn)
     {
         $sql = "SELECT *
