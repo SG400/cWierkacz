@@ -3,7 +3,6 @@
 class Message
 {
 
-    //Static REPOSITORY methods:
     public static function getAllMessages(mysqli $db_conn, $sender_receiver, $user_id)
     {
 
